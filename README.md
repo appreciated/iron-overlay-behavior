@@ -1,4 +1,4 @@
-# Paper Slider
+# iron-overlay-behavior for Vaadin
 
 Vaadin 14 Java integration of @polymer/iron-overlay-behavior
 
