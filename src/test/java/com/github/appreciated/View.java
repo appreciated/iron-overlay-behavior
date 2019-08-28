@@ -1,6 +1,7 @@
 package com.github.appreciated;
 
 import com.github.appreciated.ironoverlay.IronOverlay;
+import com.github.appreciated.ironoverlay.IronOverlayBuilder;
 import com.github.appreciated.ironoverlay.VerticalOrientation;
 import com.vaadin.flow.component.AttachEvent;
 import com.vaadin.flow.component.UI;
@@ -17,9 +18,10 @@ public class View extends VerticalLayout {
 
     public View() {
         setSizeFull();
-        ironOverlay = new IronOverlay();
-        ironOverlay.add(new Label("Hidden content"));
-        ironOverlay.setVerticalAlign(VerticalOrientation.TOP);
+        ironOverlay = IronOverlayBuilder.get()
+                .with(new Label("Hidden content"))
+                .withVerticalAlign(VerticalOrientation.TOP)
+                .build();
         add(ironOverlay);
 
         Label label = new Label("Always visible");
