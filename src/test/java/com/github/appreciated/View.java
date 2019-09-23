@@ -24,10 +24,26 @@ public class View extends VerticalLayout {
                 .build();
         add(ironOverlay);
 
-        Label label = new Label("Always visible");
+        Label label = new Label("Always visible"
+                + "Always visible"
+                + "Always visible"
+                + "Always visible"
+                + "Always visible"
+                + "Always visible"
+                + "Always visible"
+                + "Always visible"
+                + "Always visible"
+                + "Always visible"
+                + "Always visible"
+                + "Always visible"
+                + "Always visible"
+                + "Always visible"
+        );
+        label.setWidth("20px");
         setAlignItems(Alignment.CENTER);
         setJustifyContentMode(JustifyContentMode.CENTER);
         add(label);
+        getStyle().set("overflow", "auto");
     }
 
     @Override
