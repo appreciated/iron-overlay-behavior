@@ -1,6 +1,6 @@
 # iron-overlay-behavior for Vaadin
 
-Vaadin 14 Java integration of @polymer/iron-overlay-behavior
+Vaadin 14 Java integration of [@polymer/iron-overlay-behavior](https://www.webcomponents.org/element/@polymer/iron-overlay-behavior)
 
 ## Development instructions
 
