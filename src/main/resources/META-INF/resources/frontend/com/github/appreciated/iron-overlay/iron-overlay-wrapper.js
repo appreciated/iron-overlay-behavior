@@ -1,4 +1,4 @@
-import {PolymerElement, html} from '@polymer/polymer';
+import {html, PolymerElement} from '@polymer/polymer';
 import {mixinBehaviors} from '@polymer/polymer/lib/legacy/class.js';
 import {IronOverlayBehavior} from '@polymer/iron-overlay-behavior/iron-overlay-behavior.js';
 
@@ -14,5 +14,15 @@ class IronOverlayWrapper extends mixinBehaviors(IronOverlayBehavior, PolymerElem
       <slot></slot>
     `;
     }
+
+    _openedChanged(opened) {
+        super._openedChanged(opened);
+        if (opened) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = null;
+        }
+    }
 }
+
 customElements.define('iron-overlay-wrapper', IronOverlayWrapper);
